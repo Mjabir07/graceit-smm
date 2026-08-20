@@ -4,7 +4,7 @@ import { execFileSync } from 'node:child_process';
 const CHROME = '/opt/pw-browsers/chromium-1194/chrome-linux/chrome';
 mkdirSync('brand/ig', { recursive: true });
 const logo = 'data:image/png;base64,' + readFileSync('assets/logo-light.png').toString('base64');
-const logoFull = 'data:image/png;base64,' + readFileSync('assets/logo-dark.png').toString('base64');
+const logoFull = 'data:image/png;base64,' + readFileSync('assets/logo-full.png').toString('base64');
 const RED = '#E31E2D', DARK = '#0B1220';
 
 function shot(name, html, w = 1080, h = 1080) {
@@ -19,16 +19,12 @@ const page = (body, extra='') => `<!doctype html><html><head><meta charset="utf-
 body{font-family:'Segoe UI',Helvetica,Arial,sans-serif;display:flex;align-items:center;justify-content:center;background:${DARK}}
 ${extra}</style></head><body>${body}</body></html>`;
 
-// Profile picture: EXACT official logo lockup on white, centered, NO edge ring (IG crops to circle)
+// Profile picture: THE ACTUAL logo file (logo-dark-footer.png) centered on white — no recreation, no ring
 shot('profile', page(
-  `<div class="wrap"><div class="stack"><img src="${logo}"/><div class="fzc">Computers <span>FZC</span></div><div class="sub">SHARJAH · UAE</div></div></div>`,
+  `<div class="wrap"><img src="${logoFull}"/></div>`,
   `html,body{background:#FFFFFF !important}
    .wrap{width:1080px;height:1080px;display:flex;align-items:center;justify-content:center;background:#FFFFFF}
-   .stack{display:flex;flex-direction:column;align-items:center}
-   .stack img{width:760px;height:auto}
-   .fzc{color:#1a1a1a;font-family:Georgia,'Times New Roman',serif;font-size:88px;font-weight:700;letter-spacing:2px;margin-top:-16px}
-   .fzc span{color:${RED}}
-   .sub{color:${RED};font-size:34px;font-weight:700;letter-spacing:11px;margin-top:24px}`
+   .wrap img{width:820px;height:auto}`
 ));
 
 // Highlight covers: dark circle bg + red line icon (inline SVG) + label under
