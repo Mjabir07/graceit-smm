@@ -19,17 +19,16 @@ const page = (body, extra='') => `<!doctype html><html><head><meta charset="utf-
 body{font-family:'Segoe UI',Helvetica,Arial,sans-serif;display:flex;align-items:center;justify-content:center;background:${DARK}}
 ${extra}</style></head><body>${body}</body></html>`;
 
-// Profile picture: EXACT official logo lockup (mark + Grace + Computers FZC) on white, red ring
+// Profile picture: EXACT official logo lockup on white, centered, NO edge ring (IG crops to circle)
 shot('profile', page(
-  `<div class="wrap"><div class="ring"></div><div class="stack"><img src="${logo}"/><div class="fzc">Computers <span>FZC</span></div><div class="sub">SHARJAH · UAE</div></div></div>`,
+  `<div class="wrap"><div class="stack"><img src="${logo}"/><div class="fzc">Computers <span>FZC</span></div><div class="sub">SHARJAH · UAE</div></div></div>`,
   `html,body{background:#FFFFFF !important}
-   .wrap{width:1080px;height:1080px;display:flex;align-items:center;justify-content:center;position:relative;background:#FFFFFF}
-   .ring{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:940px;height:940px;border-radius:50%;border:14px solid ${RED}}
-   .stack{display:flex;flex-direction:column;align-items:center;margin-top:0}
-   .stack img{width:680px;height:auto}
-   .fzc{color:#1a1a1a;font-family:Georgia,'Times New Roman',serif;font-size:78px;font-weight:700;letter-spacing:2px;margin-top:-18px}
+   .wrap{width:1080px;height:1080px;display:flex;align-items:center;justify-content:center;background:#FFFFFF}
+   .stack{display:flex;flex-direction:column;align-items:center}
+   .stack img{width:760px;height:auto}
+   .fzc{color:#1a1a1a;font-family:Georgia,'Times New Roman',serif;font-size:88px;font-weight:700;letter-spacing:2px;margin-top:-16px}
    .fzc span{color:${RED}}
-   .sub{color:${RED};font-size:32px;font-weight:700;letter-spacing:10px;margin-top:22px}`
+   .sub{color:${RED};font-size:34px;font-weight:700;letter-spacing:11px;margin-top:24px}`
 ));
 
 // Highlight covers: dark circle bg + red line icon (inline SVG) + label under
