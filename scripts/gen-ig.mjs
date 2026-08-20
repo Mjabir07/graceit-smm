@@ -22,7 +22,8 @@ ${extra}</style></head><body>${body}</body></html>`;
 // Profile picture: EXACT official logo lockup (mark + Grace + Computers FZC) on white, red ring
 shot('profile', page(
   `<div class="wrap"><div class="ring"></div><div class="stack"><img src="${logo}"/><div class="fzc">Computers <span>FZC</span></div><div class="sub">SHARJAH · UAE</div></div></div>`,
-  `.wrap{width:1080px;height:1080px;display:flex;align-items:center;justify-content:center;position:relative;background:#FFFFFF}
+  `html,body{background:#FFFFFF !important}
+   .wrap{width:1080px;height:1080px;display:flex;align-items:center;justify-content:center;position:relative;background:#FFFFFF}
    .ring{position:absolute;width:1010px;height:1010px;border-radius:50%;border:14px solid ${RED}}
    .stack{display:flex;flex-direction:column;align-items:center;margin-top:20px}
    .stack img{width:680px;height:auto}
