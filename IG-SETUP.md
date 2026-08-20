@@ -20,7 +20,8 @@ Upload **`brand/ig/profile.png`**. It's centered/circle-safe (IG crops to a circ
 
 - **Username (@handle):** `graceitsolutions` (if taken: `graceit.ae` or `graceit.uae`)
 - **Name field (the bold line — NOT the @handle):**
-  `Grace IT Solutions | CCTV & IT Support Sharjah`
+  `Grace Computers FZC | CCTV & IT Support Sharjah`
+  > Brand name = **Grace Computers FZC** (matches the official logo). "IT Solutions" is only a descriptor — use the FZC name for identity.
   > IG search indexes the **Name** field. Putting "CCTV" + "IT Support" + "Sharjah" here makes you findable — the @handle alone won't.
 
 Keep the same @handle on Facebook + LinkedIn for consistency.

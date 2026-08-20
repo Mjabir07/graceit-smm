@@ -19,15 +19,16 @@ const page = (body, extra='') => `<!doctype html><html><head><meta charset="utf-
 body{font-family:'Segoe UI',Helvetica,Arial,sans-serif;display:flex;align-items:center;justify-content:center;background:${DARK}}
 ${extra}</style></head><body>${body}</body></html>`;
 
-// Profile picture: full-colour logo on white circle-safe bg, red ring, wordmark
+// Profile picture: EXACT official logo lockup (mark + Grace + Computers FZC) on white, red ring
 shot('profile', page(
-  `<div class="wrap"><div class="ring"></div><div class="stack"><img src="${logoFull}"/><div class="wm">IT SOLUTIONS</div><div class="sub">SHARJAH · UAE</div></div></div>`,
+  `<div class="wrap"><div class="ring"></div><div class="stack"><img src="${logo}"/><div class="fzc">Computers <span>FZC</span></div><div class="sub">SHARJAH · UAE</div></div></div>`,
   `.wrap{width:1080px;height:1080px;display:flex;align-items:center;justify-content:center;position:relative;background:#FFFFFF}
    .ring{position:absolute;width:1010px;height:1010px;border-radius:50%;border:14px solid ${RED}}
-   .stack{display:flex;flex-direction:column;align-items:center;gap:6px;margin-top:20px}
-   .stack img{width:660px;height:auto}
-   .wm{color:#1F2937;font-size:78px;font-weight:800;letter-spacing:16px;margin-top:-10px}
-   .sub{color:${RED};font-size:34px;font-weight:700;letter-spacing:10px}`
+   .stack{display:flex;flex-direction:column;align-items:center;margin-top:20px}
+   .stack img{width:680px;height:auto}
+   .fzc{color:#1a1a1a;font-family:Georgia,'Times New Roman',serif;font-size:78px;font-weight:700;letter-spacing:2px;margin-top:-18px}
+   .fzc span{color:${RED}}
+   .sub{color:${RED};font-size:32px;font-weight:700;letter-spacing:10px;margin-top:22px}`
 ));
 
 // Highlight covers: dark circle bg + red line icon (inline SVG) + label under
